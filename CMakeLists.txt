@@ -3,6 +3,11 @@ project("whisper.cpp" C CXX)
 project("whisper.cpp" VERSION 1.7.4)
 include(CheckIncludeFileCXX)
 
+# Add RPATH settings
+set(CMAKE_INSTALL_RPATH "@executable_path/../lib")
+set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
 set(SOVERSION 1)
 
 #set(CMAKE_WARN_DEPRECATED YES)
